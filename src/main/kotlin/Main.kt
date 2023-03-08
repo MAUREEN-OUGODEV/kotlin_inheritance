@@ -8,7 +8,7 @@ fun main() {
     toyota.identity()
     println(toyota.calculateParkingFees(4))
     var bus =Bus("Nissan","Scania","blue",47)
-println(bus.maxTripFare(arrayOf(100.0,300.0,400.0,600.0)))
+println(bus.maxTripFare(600.0))
     println(bus.calculateParkingFees(3))
 
 }
@@ -53,9 +53,9 @@ class Car(make: String,model: String,color: String,capacity: Int): Vehicle(make,
 }
 class Bus(make: String,model: String,color: String,capacity: Int): Vehicle(make,model,color,capacity) {
 
-    fun maxTripFare(fare:Array < Double >): Double{
+    fun maxTripFare(fare:Double ): Double{
 //
-        var maxFareTrip = fare.max()
+        var maxFareTrip = fare * capacity
         return maxFareTrip
     }
 
